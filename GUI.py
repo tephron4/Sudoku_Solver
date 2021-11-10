@@ -43,7 +43,7 @@ class Grid:
             self.update_model()
 
             # Check if value fits in the board at (row, col) and if it leads to a solution
-            if valid(self.model, val, (row, col)) and solve():
+            if valid(self.model, val, (row, col)) and self.solve():
                 return True
             else:
                 self.cubes[row][col].set(0)
