@@ -33,6 +33,7 @@ Also prints a better board that is easier to look at.
  GUI.py
 --------
 A GUI version of the sudoku solver with extra features:
- - Can be played (unlimited allowed mistakes)
- - Can note in values (then delete or insert them later)
+ - Can be played (Lose after 3 mistakes)
+ - Can note/sketch in values (then delete or insert them later)
  - Can choose to have the board solved for you at any point
+    -> Solved the same way that solveV2.py does it
