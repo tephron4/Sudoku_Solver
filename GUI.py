@@ -51,23 +51,6 @@ class Grid:
                 self.update_model()
                 return False
 
-    def update_model(self):
-        self.model = [[self.cubes[i][j].value for j in range(self.cols)] for i in range(self.rows)]
-    
-    def place(self, val):
-        row, col = self.selected
-        if self.cubes[row][col].value == 0:
-            self.cubes[row][col].set(val)
-            self.update_model()
-
-            if valid(self.model, val, (row,col)) and self.solve():
-                return True
-            else:
-                self.cubes[row][col].set(0)
-                self.cubes[row][col].set_temp(0)
-                self.update_model()
-                return False
-
     # Function for sketching in a given value to a selected spot (cube)
     def sketch(self, val):
         row, col = self.selected
